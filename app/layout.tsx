@@ -19,15 +19,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  headerSlot,
 }: Readonly<{
   children: React.ReactNode;
+  headerSlot: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header className="py-4 px-12 flex items-center bg-foreground text-background sticky top-0 left-0 right-0 h-16">
+          {headerSlot}
+        </header>
+        <main className="py-8 px-12">{children}</main>
+
+        <footer className="py-8 px-12 flex items-center bg-foreground/20">
+          Footer - Bottom of the page
+        </footer>
       </body>
     </html>
   );
