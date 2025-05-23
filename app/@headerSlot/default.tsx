@@ -1,7 +1,7 @@
 import React from "react";
 
-function Default() {
-  return null;
+function Page() {
+  return "Page 1";
 }
 
-export default Default;
+export default Page;

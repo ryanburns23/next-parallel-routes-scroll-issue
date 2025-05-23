@@ -33,7 +33,6 @@ export default function RootLayout({
           {headerSlot}
         </header>
         <main className="py-8 px-12">{children}</main>
-
         <footer className="py-8 px-12 flex items-center bg-foreground/20">
           Footer - Bottom of the page
         </footer>
